@@ -1,0 +1,24 @@
+{
+  "name": "andrewgun95.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass" : "node-sass --watch ./style/sass/main.scss ./style/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewgun95/andrewgun95.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewgun95/andrewgun95.github.io/issues"
+  },
+  "homepage": "https://github.com/andrewgun95/andrewgun95.github.io#readme"
+}

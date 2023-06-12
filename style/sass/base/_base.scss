@@ -1,0 +1,31 @@
+/* CSS RESET */
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 10 px ~ 1 rem
+}
+
+body {
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding: 0 3%;
+}
