@@ -1,0 +1,16 @@
+@mixin blip($identifier, $color, $duration) {
+    @keyframes fade-#{$identifier} {
+        from {
+            background-color: rgba($color, 1.0);
+        }
+
+        to {
+            background-color: rgba($color, 0.5);
+        }
+    }
+
+    animation-duration: $duration ;
+    animation-name: fade-#{$identifier};
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

@@ -1,0 +1,37 @@
+@mixin btn-hide($content) {
+    display: inline-block;
+    width: $btn-hide-width;
+    padding: 1rem;
+
+    font-size: 2rem;
+    text-align: center;
+
+
+    position: relative;
+
+    &:hover {
+        &::after {
+            content: "";
+            width: 0%;
+            color: transparent;
+        }
+    }
+
+    &::after {
+        content: $content;
+
+        display: inline-block;
+        width: $btn-hide-width;
+        height: 0.33 * $btn-hide-width;
+        padding-top: 1rem;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: $header-color-primary;
+        color: $header-color-secondary;
+
+        transition: all .5s;
+    }
+}

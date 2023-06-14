@@ -1,0 +1,204 @@
+/* CSS RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+ul,
+ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  /* 1.7 times greater than normal line heigth */ }
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .row [class^="col-"] {
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 6rem * 2) / 3); }
+  .row .col-2-of-3 {
+    width: calc(2 * ((100% - 6rem * 2) / 3) + 6rem); }
+  .row .col-1-of-4 {
+    width: calc((100% - 6rem * 3) / 4); }
+  .row .col-2-of-4 {
+    width: calc(2 * ((100% - 6rem * 3) / 4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc(3 * ((100% - 6rem * 3) / 4) + 2 * 6rem); }
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background-color: #000; }
+  .header__banner {
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    background-color: #E2E2E2; }
+    .header__banner-top::after {
+      content: "";
+      clear: both;
+      display: table; }
+  .header__logo {
+    float: left;
+    width: 10rem;
+    text-align: center; }
+    .header__logo-photo {
+      width: 50%; }
+    .header__logo-name {
+      font-size: 2rem;
+      text-transform: uppercase;
+      padding-top: .75rem;
+      border-top: 1px solid #000; }
+  .header__message {
+    float: right;
+    position: relative;
+    margin-top: 1.25rem; }
+    .header__message-info {
+      display: inline-block;
+      background-color: #FFF;
+      padding: 0.5rem 2rem 0.5rem 1rem;
+      font-size: 1.8rem;
+      border-radius: 2rem;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%); }
+      .header__message-info::after {
+        content: "";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        position: relative;
+        top: 0;
+        right: -1rem;
+        border-radius: 50%;
+        animation-duration: 0.5s;
+        animation-name: fade-status;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; }
+
+@keyframes fade-status {
+  from {
+    background-color: #50c878; }
+  to {
+    background-color: rgba(80, 200, 120, 0.5); } }
+    .header__message-me {
+      margin-left: 20rem; }
+      .header__message-me:link, .header__message-me:visited {
+        display: inline-block;
+        font-size: 1.5rem;
+        line-height: 1;
+        background-color: #000;
+        color: #FFF;
+        width: 7.5rem;
+        height: 7.5rem;
+        text-align: center;
+        border-radius: 50%;
+        padding: 2rem;
+        transition: transform .2s; }
+      .header__message-me:hover, .header__message-me:active {
+        transform: scale(1.25); }
+  .header__job {
+    margin: 25rem 0; }
+    .header__job-title--parent {
+      font-size: 6.4rem;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1.5rem;
+      position: relative; }
+      .header__job-title--parent > span {
+        display: inline-block;
+        width: 50%;
+        font-size: 2rem;
+        text-transform: uppercase;
+        position: absolute;
+        top: 100%;
+        left: 50%; }
+    .header__job-title--child-1 {
+      color: #000;
+      background-color: #E2E2E2;
+      border: 1px solid #000;
+      transform: translate(-50%, -0.75rem);
+      z-index: +1;
+      transition: all .5s .2s;
+      cursor: pointer; }
+      .header__job-title--child-1:hover {
+        transform: translate(-50%);
+        z-index: 0; }
+      .header__job-title--child-1:hover + span {
+        transform: translate(-50%, -0.75rem);
+        z-index: +1; }
+    .header__job-title--child-2 {
+      background-color: #000;
+      color: #FFF;
+      transform: translateX(-50%);
+      z-index: 0;
+      transition: all .5s .2s; }
+    .header__job-description {
+      margin-top: 3rem;
+      font-size: 2.4rem;
+      text-align: justify; }
+      .header__job-description > span {
+        font-weight: bold;
+        border: 1px solid #000;
+        padding: 0 .5rem; }
+  .header__contact-list::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .header__contact-item {
+    float: left; }
+    .header__contact-item:not(:last-child) {
+      margin-right: 2.5rem; }
+  .header__contact-logo {
+    width: 5rem; }
+
+.btn-about-me {
+  display: inline-block;
+  width: 15rem;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  position: relative; }
+  .btn-about-me:hover::after {
+    content: "";
+    width: 0%;
+    color: transparent; }
+  .btn-about-me::after {
+    content: "About Me";
+    display: inline-block;
+    width: 15rem;
+    height: 4.95rem;
+    padding-top: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #FFF;
+    transition: all .5s; }
