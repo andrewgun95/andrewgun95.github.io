@@ -503,7 +503,7 @@ body {
     width: 100%;
     height: 0%;
     visibility: hidden;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: #262521;
@@ -521,35 +521,17 @@ body {
     height: 0%;
     visibility: hidden; } }
 
-.btn-about-me {
-  float: right;
-  display: inline-block;
-  width: 15rem;
-  padding: 1rem;
-  font-size: 2rem;
-  text-align: center;
-  position: relative;
-  animation: fadeUpKeyframes 2.25s ease-in; }
-  .btn-about-me:hover::after {
-    content: "";
-    width: 0%;
-    color: transparent; }
-  .btn-about-me::after {
-    content: "About Me";
-    display: inline-block;
-    width: 15rem;
-    height: 5.5005rem;
-    padding-top: 1rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #000;
-    color: #FFF;
-    transition: all .5s; }
-  .btn-about-me:link, .btn-about-me:visited {
-    color: #000;
-    text-transform: uppercase;
-    border: 1px solid #000; }
+.navigation {
+  position: fixed;
+  bottom: 3.5rem;
+  right: 5rem; }
+  .navigation__button {
+    z-index: 10;
+    animation: fadeUpKeyframes 2.25s ease-in; }
+    .navigation__button:link, .navigation__button:visited {
+      color: #000;
+      text-transform: uppercase;
+      border: 1px solid #000; }
 
 @keyframes fadeUpKeyframes {
   0% {
@@ -561,38 +543,179 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+    .navigation__button--1 {
+      display: inline-block;
+      width: 15rem;
+      padding: 1rem;
+      font-size: 2rem;
+      text-align: center;
+      position: relative; }
+      .navigation__button--1:hover::after {
+        content: "";
+        width: 0%;
+        color: transparent; }
+      .navigation__button--1::after {
+        content: "About Me";
+        display: inline-block;
+        width: 15rem;
+        height: 5.5005rem;
+        padding-top: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        color: #FFF;
+        transition: all .5s; }
+    .navigation__button--2 {
+      display: inline-block;
+      width: 15rem;
+      padding: 1rem;
+      font-size: 2rem;
+      text-align: center;
+      position: relative; }
+      .navigation__button--2:hover::after {
+        content: "";
+        width: 0%;
+        color: transparent; }
+      .navigation__button--2::after {
+        content: "Projects";
+        display: inline-block;
+        width: 15rem;
+        height: 5.5005rem;
+        padding-top: 1rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #000;
+        color: #FFF;
+        transition: all .5s; }
 
 .section-about {
   width: 100%;
   height: 100vh;
   padding: 5rem; }
+  .section-about:target .section-about__title {
+    animation: fadeUpLeftframes 1.5s ease-in; }
 
-.btn-projects {
-  display: inline-block;
-  width: 15rem;
-  padding: 1rem;
-  font-size: 2rem;
-  text-align: center;
-  position: relative;
-  left: 100%;
-  transform: translateX(-100%); }
-  .btn-projects:hover::after {
-    content: "";
-    width: 0%;
-    color: transparent; }
-  .btn-projects::after {
-    content: "Projects";
-    display: inline-block;
-    width: 15rem;
-    height: 5.5005rem;
-    padding-top: 1rem;
-    position: absolute;
+@keyframes fadeUpLeftframes {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem); }
+  80% {
+    opacity: 0;
+    transform: translateX(1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+  .section-about:target .story-option-group li:nth-of-type(1) {
+    animation: fadeUpKeyframes 1.5s ease-in; }
+
+@keyframes fadeUpKeyframes {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  80% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .section-about:target .story-option-group li:nth-of-type(2) {
+    animation: fadeUpKeyframes 1.5s ease-in; }
+
+@keyframes fadeUpKeyframes {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  80% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .section-about:target .story-option-group li:nth-of-type(3) {
+    animation: fadeUpKeyframes 1.75s ease-in; }
+
+@keyframes fadeUpKeyframes {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  80% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .section-about:target .story-option-group li:nth-of-type(4) {
+    animation: fadeUpKeyframes 1.75s ease-in; }
+
+@keyframes fadeUpKeyframes {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  80% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .section-about:target .story-option-group li:nth-of-type(5) {
+    animation: fadeUpKeyframes 2s ease-in; }
+
+@keyframes fadeUpKeyframes {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  80% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .section-about:target .story-option-group li:nth-of-type(6) {
+    animation: fadeUpKeyframes 2s ease-in; }
+
+@keyframes fadeUpKeyframes {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  80% {
+    opacity: 0;
+    transform: translateY(1.5rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+  .section-about:target .story__container {
+    animation: fadeInKeyframes 2s ease-in none; }
+
+@keyframes fadeInKeyframes {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .section-about:target .section-about__cover {
+    width: 100%;
+    height: 0%;
+    visibility: hidden;
+    position: fixed;
     top: 0;
     left: 0;
-    background-color: #000;
-    color: #FFF;
-    transition: all .5s; }
-  .btn-projects:link, .btn-projects:visited {
-    color: #000;
-    text-transform: uppercase;
-    border: 1px solid #000; }
+    background-color: #262521;
+    z-index: 100;
+    animation: scrollDownKeyframes 1s ease-in; }
+
+@keyframes scrollDownKeyframes {
+  0% {
+    transform: translateY(0);
+    height: 0%;
+    visibility: visible; }
+  50% {
+    transform: translateY(0);
+    height: 100%;
+    visibility: visible; }
+  100% {
+    transform: translateY(100%);
+    height: 100%;
+    visibility: visible; } }

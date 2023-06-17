@@ -1,0 +1,28 @@
+.navigation {
+    position: fixed;
+    bottom: 3.5rem;
+    right: 5rem;
+
+    &__button {
+
+        &:link,
+        &:visited {
+            color: $color-primary;
+            text-transform: uppercase;
+            border: 1px solid $color-primary;
+        }
+
+        z-index: 10;
+
+        @include fadeUp(1.5rem, 2.25s);
+
+        &--1 {
+            @include btn-hide("About Me");
+        }
+
+        &--2 {
+            @include btn-hide("Projects");
+        }
+    }
+
+}

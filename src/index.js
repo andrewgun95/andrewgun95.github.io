@@ -1,6 +1,4 @@
-// STORY COMPONENTS
-
-function selectStory(number, textNumber, roleNumber) {
+function selectStory(number, textNumber) {
   const storyElements = document.querySelectorAll('[id^="story"]');
   for (const storyElement of storyElements) {
     if (storyElement.id.includes(number)) {

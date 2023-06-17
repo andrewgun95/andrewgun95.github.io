@@ -223,7 +223,7 @@
 
         visibility: hidden;
 
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
 
@@ -234,19 +234,4 @@
         @include scrollUp(1s);
     }
 
-}
-
-.btn-about-me {
-    float: right;
-
-    @include btn-hide("About Me");
-
-    &:link,
-    &:visited {
-        color: $color-primary;
-        text-transform: uppercase;
-        border: 1px solid $color-primary;
-    }
-
-    @include fadeUp(1.5rem, 2.25s);
 }

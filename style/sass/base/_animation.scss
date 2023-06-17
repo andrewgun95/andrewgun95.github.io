@@ -36,6 +36,30 @@
     animation: scrollUpKeyframes $duration ease-in;
 }
 
+@mixin scrollDown($duration) {
+    @keyframes scrollDownKeyframes {
+        0% {
+            transform: translateY(0);
+            height: 0%;
+            visibility: visible;
+        }
+
+        50% {
+            transform: translateY(0);
+            height: 100%;
+            visibility: visible;
+        }
+
+        100% {
+            transform: translateY(100%);
+            height: 100%;
+            visibility: visible;
+        }
+    }
+
+    animation: scrollDownKeyframes $duration ease-in;
+}
+
 @mixin fadeIn($duration, $delay) {
     @keyframes fadeInKeyframes {
         0% {
