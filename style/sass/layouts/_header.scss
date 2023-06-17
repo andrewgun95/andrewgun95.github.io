@@ -1,7 +1,6 @@
 .header {
     width: 100%;
     height: 100vh;
-    background-color: $header-color-primary;
 
     &__banner {
         width: 100%;
@@ -9,7 +8,7 @@
 
         padding: 5rem;
 
-        background-color: $header-color-tertiary;
+        background-color: $color-tertiary;
 
         &-top {
             @include clearfix;
@@ -21,15 +20,18 @@
         width: 10rem;
         text-align: center;
 
+        @include fadeUp(1.5rem, 1.75s);
+
         &-photo {
             width: 50%;
         }
 
         &-name {
             font-size: 2rem;
+            font-weight: lighter;
             text-transform: uppercase;
             padding-top: .75rem;
-            border-top: 1px solid $header-color-primary;
+            border-top: 1px solid $color-primary;
         }
     }
 
@@ -39,10 +41,12 @@
         position: relative;
         margin-top: 1.25rem;
 
+        @include fadeUp(1.5rem, 2s);
+
         &-info {
             display: inline-block;
 
-            background-color: $header-color-secondary;
+            background-color: $color-secondary;
             padding: 0.5rem 2rem 0.5rem 1rem;
             font-size: 1.8rem;
             border-radius: 2rem;
@@ -76,8 +80,8 @@
                 font-size: 1.5rem;
                 line-height: 1;
 
-                background-color: $header-color-primary;
-                color: $header-color-secondary;
+                background-color: $color-primary;
+                color: $color-secondary;
 
                 width: 7.5rem;
                 height: 7.5rem;
@@ -102,21 +106,30 @@
         margin: 25rem 0;
 
         &-title {
+            position: relative;
+
             &--parent {
-                font-size: 6.4rem;
+                font-size: 6rem;
                 text-transform: uppercase;
                 text-align: center;
+                font-weight: normal;
 
                 padding: 1.5rem;
 
-                position: relative;
+                @include fadeIn(1s, .5s);
+            }
+
+            &--child-group {
+
+                @include fadeUp(1.5rem, 1.5s);
 
                 >span {
                     display: inline-block;
-                    width: 50%;
+                    width: 25rem;
 
                     font-size: 2rem;
                     text-transform: uppercase;
+                    text-align: center;
 
                     position: absolute;
                     top: 100%;
@@ -125,9 +138,9 @@
             }
 
             &--child-1 {
-                color: $header-color-primary;
-                background-color: $header-color-tertiary;
-                border: 1px solid $header-color-primary;
+                color: $color-primary;
+                background-color: $color-tertiary;
+                border: 1px solid $color-primary;
 
                 transform: translate(-50%, -.75rem);
                 z-index: +1;
@@ -141,15 +154,15 @@
                     z-index: 0;
                 }
 
-                &:hover + span {
+                &:hover+span {
                     transform: translate(-50%, -.75rem);
                     z-index: +1;
                 }
             }
 
             &--child-2 {
-                background-color: $header-color-primary;
-                color: $header-color-secondary;
+                background-color: $color-primary;
+                color: $color-secondary;
 
                 transform: translateX(-50%);
                 z-index: 0;
@@ -162,22 +175,29 @@
             margin-top: 3rem;
             font-size: 2.4rem;
             text-align: justify;
+            padding: 0 10%;
 
-            > span {
+            @include fadeIn(1s, .75s);
+
+            >span {
                 font-weight: bold;
-                border: 1px solid $header-color-primary;
+                border: 1px solid $color-primary;
                 padding: 0 .5rem;
             }
         }
     }
 
     &__contact {
+        @include clearfix;
+
         &-list {
-            @include clearfix;
+            float: left;
+
+            @include fadeUp(1.5rem, 2.5s);
         }
 
         &-item {
-            float: left;
+            display: inline-block;
 
             &:not(:last-child) {
                 margin-right: 2.5rem;
@@ -185,16 +205,48 @@
         }
 
         &-logo {
-            width: 5rem;
+            height: 5rem;
+            transition: transform .2s;
         }
 
-        &-link {
-            
+        &-link:hover,
+        &-link:active {
+            img {
+                transform: scale(1.25);
+            }
         }
+    }
+
+    &__cover {
+        width: 100%;
+        height: 0%;
+
+        visibility: hidden;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: $color-cover;
+
+        z-index: 100;
+
+        @include scrollUp(1s);
     }
 
 }
 
 .btn-about-me {
+    float: right;
+
     @include btn-hide("About Me");
+
+    &:link,
+    &:visited {
+        color: $color-primary;
+        text-transform: uppercase;
+        border: 1px solid $color-primary;
+    }
+
+    @include fadeUp(1.5rem, 2.25s);
 }

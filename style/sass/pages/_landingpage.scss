@@ -1,0 +1,20 @@
+.section-about {
+    width: 100%;
+    height: 100vh;
+    
+    padding: 5rem;
+}
+
+.btn-projects {
+    @include btn-hide("Projects");
+
+    left: 100%;
+    transform: translateX(-100%);
+
+    &:link,
+    &:visited {
+        color: $color-primary;
+        text-transform: uppercase;
+        border: 1px solid $color-primary;
+    }
+}

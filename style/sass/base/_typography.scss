@@ -4,3 +4,29 @@ body {
     /* font-size: 16px; */
     line-height: 1.7; /* 1.7 times greater than normal line heigth */
 }
+
+.heading-primary {
+    font-size: 5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.heading-secondary {
+
+}
+
+.tag {
+    display: inline-block;
+
+    padding: .2rem .5rem .3rem;
+
+    font-size: $regular-text-size;
+    font-weight: 600;
+
+    border-radius: 3px;
+
+    box-shadow: .25rem .25rem 0rem $color-primary;
+    color: $color-primary;
+
+    background-color: $dark-orange-color;
+}

@@ -1,0 +1,83 @@
+.story {
+    &__container {
+        position: relative;
+    }
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:not(&__select) {
+        opacity: 0;
+    }
+
+    &__headline {
+        margin-bottom: 4rem;
+    }
+
+    &__title {
+        font-size: 3.6rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+    }
+
+    &__subtitle {
+        font-size: 2.4rem;
+        font-weight: 300;
+    }
+
+    &__content {
+        position: relative;
+        width: 80rem;
+        height: 30rem;
+    }
+
+    &__text {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        font-size: 2rem;
+
+        overflow: hidden;
+    }
+
+    &__text:not(&__select-text) {
+        opacity: 0;
+    }
+
+    &__job-skill {
+        &-list {
+            @include clearfix;
+        }
+
+        &-item {
+            float: left;
+
+            margin-top: .2rem;
+            margin-bottom: .2rem;
+
+            &:not(:last-child) {
+                margin-right: .5rem;
+            }
+        }
+
+    }
+
+    &__select &__title {
+        @include fadeIn(1s, none);
+    }
+
+    &__select &__subtitle {
+        @include fadeIn(1.5s, none);
+    }
+
+    &__select &__job-skill {
+        @include fadeUp(1.5rem, 1.75s)
+    }
+
+    &__select &__select-text {
+        @include fadeLeft(1.5rem, 1.5s);
+    }
+
+}

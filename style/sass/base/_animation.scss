@@ -1,5 +1,5 @@
 @mixin blip($identifier, $color, $duration) {
-    @keyframes fade-#{$identifier} {
+    @keyframes blipKeyframes-#{$identifier} {
         from {
             background-color: rgba($color, 1.0);
         }
@@ -10,7 +10,107 @@
     }
 
     animation-duration: $duration ;
-    animation-name: fade-#{$identifier};
+    animation-name: blipKeyframes-#{$identifier};
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+@mixin scrollUp($duration) {
+    @keyframes scrollUpKeyframes {
+        0% {
+            height: 100%;
+            visibility: visible;
+        }
+
+        60% {
+            height: 100%;
+            visibility: visible;
+        }
+
+        100% {
+            height: 0%;
+            visibility: hidden;
+        }
+    }
+
+    animation: scrollUpKeyframes $duration ease-in;
+}
+
+@mixin fadeIn($duration, $delay) {
+    @keyframes fadeInKeyframes {
+        0% {
+            opacity: 0;
+        }
+
+        60% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    animation: fadeInKeyframes $duration ease-in $delay;
+}
+
+
+@mixin fadeUp($amount, $duration) {
+    @keyframes fadeUpKeyframes {
+        0% {
+            opacity: 0;
+            transform: translateY(+$amount);
+        }
+
+        80% {
+            opacity: 0;
+            transform: translateY(+$amount);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    animation: fadeUpKeyframes $duration ease-in;
+}
+
+@mixin fadeLeft($amount, $duration) {
+    @keyframes fadeUpLeftframes {
+        0% {
+            opacity: 0;
+            transform: translateX(+$amount);
+        }
+
+        80% {
+            opacity: 0;
+            transform: translateX(+$amount);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    animation: fadeUpLeftframes $duration ease-in;
+}
+
+@mixin bounce($identifier, $position, $bounce-step, $duration, $delay) {
+    @keyframes bounceKeyframes-#{$identifier} {
+        0% {
+            transform: translateY($position);
+        }
+
+        50% {
+            transform: translateY($position - $bounce-step);
+        }
+
+        100% {
+            transform: translateY($position);
+        }
+    }
+
+    animation: bounceKeyframes-#{$identifier} $duration ease-in $delay;
 }

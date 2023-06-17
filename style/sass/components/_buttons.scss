@@ -22,15 +22,15 @@
 
         display: inline-block;
         width: $btn-hide-width;
-        height: 0.33 * $btn-hide-width;
+        height: 0.3667 * $btn-hide-width;
         padding-top: 1rem;
 
         position: absolute;
         top: 0;
         left: 0;
 
-        background-color: $header-color-primary;
-        color: $header-color-secondary;
+        background-color: $color-primary;
+        color: $color-secondary;
 
         transition: all .5s;
     }

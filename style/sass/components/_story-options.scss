@@ -1,0 +1,99 @@
+.story-option {
+    padding: 1rem 1rem 1rem 5rem;
+    position: relative;
+
+    &__label {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-primary;
+        cursor: pointer;
+    }
+
+    &__label:hover &__button {
+        transform: scale(1.2);
+    }
+
+    &__button {
+        display: inline-block;
+
+        position: absolute;
+        top: .5rem;
+        left: -1rem;
+
+        line-height: 1;
+        font-size: 5rem;
+        text-align: center;
+
+        transition: all .2s;
+    }
+
+    &-group {
+        margin-left: 5rem;
+        position: relative;
+
+        &__button {
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+
+            position: absolute;
+            top: 1.75rem;
+            left: 0.75rem;
+
+            transition: all .5s;
+        }
+
+        li:not(:last-child) {
+            margin-bottom: $options-gutter-vertical;
+
+            position: relative;
+            
+            &::after {
+                display: inline-block;
+                content: "";
+                height: $options-gutter-vertical;
+                width: 1px;
+
+                position: absolute;
+                top: 100%;
+                left: 1.4rem;
+
+                border-left: 1px dashed $color-primary;
+            }
+        }
+    }
+
+    &-group &-group__button:has(~ li &__input--1:checked) {
+        @include bounce(1, 0, 0.2rem, .2s, .4s);
+    }
+
+    &-group &-group__button:has(~ li &__input--2:checked) {
+        transform: translateY($options-movement);
+        @include bounce(2, $options-movement, 0.2rem, .2s, .4s);
+    }
+
+    &-group &-group__button:has(~ li &__input--3:checked) {
+        transform: translateY($options-movement * 2);
+        @include bounce(3, $options-movement * 2, 0.2rem, .2s, .4s);
+    }
+
+    &-group &-group__button:has(~ li &__input--4:checked) {
+        transform: translateY($options-movement * 3);
+        @include bounce(4, $options-movement * 3, 0.2rem, .2s, .4s);
+    }
+
+    &-group &-group__button:has(~ li &__input--5:checked) {
+        transform: translateY($options-movement * 4);
+        @include bounce(5, $options-movement * 4, 0.2rem, .2s, .4s);
+    }
+
+    &-group &-group__button:has(~ li &__input--6:checked) {
+        transform: translateY($options-movement * 5);
+        @include bounce(6, $options-movement * 5, 0.2rem, .2s, .4s);
+    }
+
+}

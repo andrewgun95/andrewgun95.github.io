@@ -1,16 +1,17 @@
-// HEADER COLOURS
+// THEME COLOURS
 
-$header-color-primary: #000;
-$header-color-secondary: #FFF;
-$header-color-tertiary: #E2E2E2;
+$color-primary: #000;
+$color-secondary: #FFF;
+$color-tertiary: #F0EFED;
 
+$color-cover: #262521;
 
 // GENERAL COLOURS
 
 $ligth-green-color: #50C878;
-$light-orange-color: #FF5E0E;
-$dark-orange-color: #FF8C00;
-
+$dark-orange-color: #FF5E0E;
+$light-orange-color: #FF8901;
+$dark-pink-color: #DB1D5F;
 
 // TEXT SIZE
 
@@ -19,9 +20,15 @@ $regular-text-size: 1.6rem;
 
 // GRID
 
-$grid-width: 114rem;
-$grid-gutter-vertical: 8rem;
+$grid-width: 180rem;
+$grid-gutter-vertical: 6rem;
 $grid-gutter-horizontal: 6rem;
+
+// OPTIONS
+
+$options-gap: 6.2rem;
+$options-gutter-vertical: 5rem;
+$options-movement: $options-gap + $options-gutter-vertical;
 
 
 // BUTTON

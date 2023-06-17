@@ -44,3 +44,13 @@
         }
     }
 }
+
+.row-separator {
+    max-width: $grid-width;
+
+    position: relative;
+    top: -$grid-gutter-vertical;
+    left: 0;
+
+    border-bottom: 1px solid $color-primary;
+}
