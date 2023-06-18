@@ -523,12 +523,26 @@ body {
 
 .navigation {
   position: fixed;
-  bottom: 3.5rem;
-  right: 5rem; }
-  .navigation__button {
+  bottom: 10rem;
+  right: 20rem; }
+  .navigation__list {
+    position: relative; }
+  .navigation__item {
+    position: absolute;
+    top: 0; }
+    .navigation__item:not(:first-child) {
+      left: 20rem; }
+  .navigation__select {
+    transition: opacity .5s;
+    opacity: 0; }
+  .navigation__item:has(.navigation__select) + .navigation__item .navigation__link {
+    transition: all .5s 1s;
+    opacity: 1;
+    transform: translateX(-20rem); }
+  .navigation__link {
     z-index: 10;
     animation: fadeUpKeyframes 2.25s ease-in; }
-    .navigation__button:link, .navigation__button:visited {
+    .navigation__link:link, .navigation__link:visited {
       color: #000;
       text-transform: uppercase;
       border: 1px solid #000; }
@@ -543,18 +557,18 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
-    .navigation__button--1 {
+    .navigation__link--1 {
       display: inline-block;
       width: 15rem;
       padding: 1rem;
       font-size: 2rem;
       text-align: center;
       position: relative; }
-      .navigation__button--1:hover::after {
+      .navigation__link--1:hover::after {
         content: "";
         width: 0%;
         color: transparent; }
-      .navigation__button--1::after {
+      .navigation__link--1::after {
         content: "About Me";
         display: inline-block;
         width: 15rem;
@@ -566,19 +580,19 @@ body {
         background-color: #000;
         color: #FFF;
         transition: all .5s; }
-    .navigation__button--2 {
+    .navigation__link--2 {
       display: inline-block;
       width: 15rem;
       padding: 1rem;
       font-size: 2rem;
       text-align: center;
       position: relative; }
-      .navigation__button--2:hover::after {
+      .navigation__link--2:hover::after {
         content: "";
         width: 0%;
         color: transparent; }
-      .navigation__button--2::after {
-        content: "Projects";
+      .navigation__link--2::after {
+        content: "Home";
         display: inline-block;
         width: 15rem;
         height: 5.5005rem;
@@ -607,6 +621,16 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
+  .section-about:target .story-option-group {
+    animation: fadeInKeyframes 1.25s ease-in none; }
+
+@keyframes fadeInKeyframes {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   .section-about:target .story-option-group li:nth-of-type(1) {
     animation: fadeUpKeyframes 1.5s ease-in; }
 

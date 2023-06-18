@@ -1,9 +1,35 @@
 .navigation {
     position: fixed;
-    bottom: 3.5rem;
-    right: 5rem;
+    bottom: 10rem;
+    right: 20rem;
 
-    &__button {
+    &__list {
+        position: relative;
+    }
+
+    &__item {
+        position: absolute;
+        top: 0;
+
+        &:not(:first-child) {
+            left: 20rem;
+        }
+    }
+
+    &__select {
+        transition: opacity .5s;
+
+        opacity: 0;
+    }
+
+    &__item:has(&__select) + &__item &__link {
+        transition: all .5s 1s;
+        
+        opacity: 1;
+        transform: translateX(-20rem);
+    }
+
+    &__link {
 
         &:link,
         &:visited {
@@ -21,7 +47,7 @@
         }
 
         &--2 {
-            @include btn-hide("Projects");
+            @include btn-hide("Home");
         }
     }
 

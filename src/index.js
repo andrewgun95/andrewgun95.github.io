@@ -1,3 +1,7 @@
+function selectNavigation(number) {
+  selectStyleById(document, '[id^="navigation"]', number, "navigation__select");
+}
+
 function selectStory(number, textNumber) {
   const storyElements = document.querySelectorAll('[id^="story"]');
   for (const storyElement of storyElements) {
