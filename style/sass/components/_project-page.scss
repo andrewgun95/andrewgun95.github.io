@@ -1,0 +1,54 @@
+.project {
+
+    /* PAGE CONTAINER */
+
+    &__container {
+        position: relative;
+    }
+
+    /* PAGE */
+
+    &__page {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &--1 {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &--2 {
+            transform: translateY(5rem);
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__enter-page {
+        transition: opacity .5s ease-in 1.5s, transform .5s ease-in 1.5s, visibility 2s;
+
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__exit-page {
+        transition: opacity .5s ease-out 1s, transform .5s ease-out 1s, visibility 1.5s;
+
+        transform: translateY(5rem);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__exit-page &__btn-preview {
+        transform: translateY(.3rem);
+    }
+
+    &__exit-page &__btn-return {
+        transform: scale(.98);
+    }
+
+}

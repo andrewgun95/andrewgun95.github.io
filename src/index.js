@@ -1,6 +1,14 @@
+/* NAVIGATION */
+
 function selectNavigation(number) {
-  selectStyleById(document, '[id^="navigation"]', number, "navigation__select");
+  document.querySelectorAll('[id^="navigation"]').forEach((element) => {
+    if (element.id.includes(number)) {
+      element.classList.toggle("navigation__select");
+    }
+  });
 }
+
+/* STORY */
 
 function selectStory(number, textNumber) {
   const storyElements = document.querySelectorAll('[id^="story"]');
@@ -27,4 +35,61 @@ function selectStyleById(targetElement, targetSelector, selectId, selectStyle) {
       element.classList.remove(selectStyle);
     }
   });
+}
+
+/* PROJECT MAIN */
+
+function openProject(number) {
+  const projectListElement = document.querySelector("[id=project-list");
+  projectListElement.classList.add("project__list-exit");
+  projectListElement.classList.remove("project__list-enter");
+
+  selectStyleById(
+    document,
+    '[id^="project-main"]',
+    number,
+    "project__main-enter"
+  );
+}
+
+function closeProject(number) {
+  const projectListElement = document.querySelector("[id=project-list");
+  projectListElement.classList.add("project__list-enter");
+  projectListElement.classList.remove("project__list-exit");
+
+  const projectMainElement = document.getElementById("project-main-" + number);
+  projectMainElement.classList.remove("project__main-enter");
+}
+
+/* PROJECT PREVIEW */
+
+function selectPreview(parent, number, scroll) {
+  const parentElement = document.querySelector("[id=" + parent + "]");
+
+  const previewElement = parentElement.querySelector(".project__preview");
+  const previewScrollWidth = previewElement.scrollWidth;
+  const previewScrollStart = previewElement.scrollLeft;
+
+  previewElement.scrollTo(previewScrollStart + scroll * previewScrollWidth, 0);
+
+  selectStyleById(
+    parentElement,
+    '[id^="project-preview"]',
+    number,
+    "project__preview-nav-button-select"
+  );
+}
+
+/* PROJECT PAGE */
+
+function nextPage(parent, from, to) {
+  const parentElement = document.querySelector("[id=" + parent + "]");
+
+  const fromElement = parentElement.querySelector("[id=" + from + "]");
+  fromElement.classList.add("project__exit-page");
+  fromElement.classList.remove("project__enter-page");
+
+  const toElement = parentElement.querySelector("[id=" + to + "]");
+  toElement.classList.add("project__enter-page");
+  toElement.classList.remove("project__exit-page");
 }

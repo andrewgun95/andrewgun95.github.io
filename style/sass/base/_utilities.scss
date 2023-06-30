@@ -26,6 +26,10 @@
     margin-top: 8rem !important;
 }
 
-.u-margin-top-x-large {
-    margin-top: 15rem !important;
+.u-relative {
+    position: relative !important;
+}
+
+.u-clear-fix {
+    @include clearfix;
 }

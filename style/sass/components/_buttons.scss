@@ -35,3 +35,54 @@
         transition: all .5s;
     }
 }
+
+.btn-shadow {
+
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        position: relative;
+        padding: 1.5rem 3rem;
+
+        font-size: $regular-text-size;
+        text-transform: uppercase;
+
+        border-radius: 2.5rem;
+
+        transition: all .2s;
+    }
+
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 3rem rgba($color-primary, 0.1);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 .5rem 3rem rgba($color-primary, 0.1);
+    }
+
+}
+
+.btn-scale {
+    
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        position: relative;
+
+        font-size: 4rem;
+    
+        transition: all .2s;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+}

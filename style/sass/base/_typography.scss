@@ -12,7 +12,9 @@ body {
 }
 
 .heading-secondary {
-
+    font-size: 2.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 .tag {
@@ -29,4 +31,9 @@ body {
     color: $color-primary;
 
     background-color: $dark-orange-color;
+}
+
+@mixin the {
+    font-size: 2rem;
+    font-weight: normal;
 }

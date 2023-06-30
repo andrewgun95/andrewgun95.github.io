@@ -2,6 +2,7 @@
     position: fixed;
     bottom: 10rem;
     right: 20rem;
+    z-index: 100;
 
     &__list {
         position: relative;
@@ -16,10 +17,8 @@
         }
     }
 
-    &__select {
-        transition: opacity .5s;
-
-        opacity: 0;
+    &__item:has(&__select) {
+        display: none;
     }
 
     &__item:has(&__select) + &__item &__link {
@@ -38,8 +37,6 @@
             border: 1px solid $color-primary;
         }
 
-        z-index: 10;
-
         @include fadeUp(1.5rem, 2.25s);
 
         &--1 {
@@ -47,7 +44,11 @@
         }
 
         &--2 {
-            @include btn-hide("Home");
+            @include btn-hide("Projects");
+        }
+
+        &--3 {
+            @include btn-hide("End");
         }
     }
 

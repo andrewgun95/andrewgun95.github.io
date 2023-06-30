@@ -1,0 +1,237 @@
+.project {
+
+    &__list {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &-exit {
+            transition: all .5s ease 1s;
+
+            transform: translateX(-100%);
+
+            opacity: 0;
+            visibility: hidden;
+
+            pointer-events: none;
+        }
+
+        &-enter {
+            transition: all .5s;
+
+            transform: translateX(0);
+
+            opacity: 1;
+            visibility: visible;
+
+            pointer-events: auto
+        }
+
+    }
+
+    &__the-archive {
+
+        position: relative;
+
+        margin-bottom: 2.5rem;
+
+        &-logo {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+
+            transform: translateY(-50%);
+        }
+
+        &-title {
+            @include the;
+
+            margin-left: 5rem;
+        }
+    }
+
+    &__archive {
+        position: relative;
+    }
+
+    &__tree {
+        line-height: 5rem;
+
+        summary {
+            display: inline-block;
+        }
+
+        ul>li:has(details) {
+            padding-left: 2rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+        }
+
+        ul>li {
+            padding-left: 3rem;
+        }
+
+        ul>li:not(:last-child) {
+            border-left: 1px solid $color-primary;
+        }
+
+        li {
+            position: relative;
+        }
+
+        ul>li::before {
+            content: "";
+            display: block;
+            border: solid $color-primary;
+            border-width: 0 0 1px 1px;
+
+            position: absolute;
+            top: -2.25rem;
+            left: 0px;
+            width: 2.5rem;
+            height: 4.75rem;
+        }
+
+        ul>li:not(:last-child)::before {
+            left: -1px;
+        }
+
+        ul>li:has(details)::before {
+            height: 5.75rem;
+        }
+
+    }
+
+    details[open]>summary &__topic-button::after {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+}
+
+.project__topic {
+    padding: 1rem 1rem 1rem 5rem;
+
+    position: relative;
+
+    font-size: 2rem;
+
+    &-button {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 5px;
+        border: 1px solid $color-primary;
+
+        position: absolute;
+        top: 2.25rem;
+        left: 1rem;
+
+        transition: all .2s;
+
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 75%;
+            height: 1px;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: $color-primary;
+        }
+
+        &::after {
+            transition: all .2s;
+
+            transform: translate(-50%, -50%) rotate(90deg);
+        }
+
+    }
+
+    &:hover &-button {
+        transform: scale(1.2);
+    }
+
+}
+
+.project__topic-title {
+    display: inline-block;
+
+    padding: 0 1rem;
+
+    position: relative;
+
+    font-size: 2rem;
+    text-align: center;
+
+    &-text {
+        padding: 0 .5rem;
+
+        background: linear-gradient(to right, rgba($color-primary, 0) 50%, rgba($color-primary, 1) 50%);
+        background-size: 200%;
+        background-position: 0 0;
+
+        transition: all .5s;
+    }
+
+    &:hover &-text {
+        background-position: -100% 0;
+        color: $color-secondary;
+    }
+
+    &-select-text {
+        background-position: -100% 0;
+        color: $color-secondary;
+    }
+
+    &-hint {
+        display: inline-block;
+
+        position: absolute;
+        top: 50%;
+        right: -11rem;
+
+        font-size: $regular-text-size;
+        line-height: 1.5;
+
+        width: 10rem;
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-0.5rem, -50%);
+
+        background-color: $light-orange-color;
+
+        border-radius: 5px;
+
+        transition: all .2s;
+
+        &::after {
+            content: "";
+
+            position: absolute;
+            top: 50%;
+            left: -0.75rem;
+            width: 1.5rem;
+            height: 1.5rem;
+
+            clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+
+            background-color: inherit;
+
+            transform: translateY(-50%);
+        }
+    }
+
+    &:hover &-hint {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, -50%);
+    }
+
+}
