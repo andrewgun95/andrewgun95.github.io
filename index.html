@@ -514,7 +514,7 @@
                         </summary>
                         <ul>
                           <li>
-                            <details>
+                            <details open>
                               <summary>
                                 <div class="project__topic">
                                   <span class="project__topic-button"></span>
@@ -584,7 +584,7 @@
                         </summary>
                         <ul>
                           <li>
-                            <details>
+                            <details open>
                               <summary>
                                 <div class="project__topic">
                                   <span class="project__topic-button"></span>
@@ -896,6 +896,266 @@
                             id="project-preview-2"
                             class="project__preview-nav-button"
                             onclick="selectPreview('project-main-2', 2, +0.5)"
+                          ></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project__main" id="project-main-3">
+                <div class="project__container">
+                  <div
+                    class="project__page project__page--1"
+                    id="project-page-1"
+                  >
+                    <div class="project__details">
+                      <button
+                        class="btn-scale project__btn-exit"
+                        onclick="closeProject(3)"
+                      >
+                        <i class="las la-times"></i>
+                      </button>
+                      <div class="project__details-categories">
+                        <ul>
+                          <li>
+                            <span class="project__details-category">
+                              Monolith
+                            </span>
+                          </li>
+                          <li>
+                            <span class="project__details-category">
+                              Web Development
+                            </span>
+                          </li>
+                          <li>
+                            <span class="project__details-category">
+                              Server Side
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <h2
+                        class="project__details-title heading-secondary u-margin-top-medium"
+                      >
+                        ERP Client Website
+                      </h2>
+                      <p
+                        class="project__details-description u-margin-top-small"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Nisl condimentum id venenatis a. Urna nunc
+                        id cursus metus aliquam.
+                      </p>
+                      <div class="u-clear-fix u-margin-top-large">
+                        <span class="project__details-site">
+                          <i class="las la-link"></i>
+                          <a href="#" class="project__details-site-link"
+                            >Visit Link</a
+                          >
+                        </span>
+                        <span class="project__details-status">
+                          <i class="las la-arrow-circle-up"></i>
+                          1 month ago
+                        </span>
+                        <button
+                          class="btn-shadow project__btn-preview"
+                          onclick="nextPage('project-main-3', 'project-page-1', 'project-page-2')"
+                        >
+                          Preview
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="project__page project__page--2"
+                    id="project-page-2"
+                  >
+                    <div class="u-margin-top-small">
+                      <button
+                        class="btn-scale project__btn-return"
+                        onclick="nextPage('project-main-3', 'project-page-2', 'project-page-1')"
+                      >
+                        <i class="las la-chevron-circle-left"></i>
+                      </button>
+                    </div>
+                    <div class="project__preview">
+                      <div class="project__preview-content">
+                        <div
+                          class="project__preview-card project__preview-card--square"
+                        >
+                          <img
+                            class="project__preview-img"
+                            loading="lazy"
+                            src="https://images.unsplash.com/photo-1621160471147-c5be030e199b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxMTEzMw&ixlib=rb-1.2.1&q=85&height=480"
+                            alt=""
+                          />
+                          <div class="project__preview-about">
+                            <h3>Square Picture</h3>
+                            <p>This is a very beautiful pictures</p>
+                          </div>
+                        </div>
+                        <div
+                          class="project__preview-card project__preview-card--wide"
+                        >
+                          <img
+                            class="project__preview-img"
+                            loading="lazy"
+                            src="https://images.unsplash.com/photo-1621160471147-c5be030e199b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxMTEzMw&ixlib=rb-1.2.1&q=85&height=480"
+                            alt=""
+                          />
+                          <div class="project__preview-about">
+                            <h3>Wide Picture</h3>
+                            <p>This is a very beautiful pictures</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="project__preview-nav">
+                      <ul>
+                        <li>
+                          <span
+                            id="project-preview-1"
+                            class="project__preview-nav-button project__preview-nav-button-select"
+                            onclick="selectPreview('project-main-3', 1, -0.5)"
+                          ></span>
+                        </li>
+                        <li>
+                          <span
+                            id="project-preview-2"
+                            class="project__preview-nav-button"
+                            onclick="selectPreview('project-main-3', 2, +0.5)"
+                          ></span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="project__main" id="project-main-4">
+                <div class="project__container">
+                  <div
+                    class="project__page project__page--1"
+                    id="project-page-1"
+                  >
+                    <div class="project__details">
+                      <button
+                        class="btn-scale project__btn-exit"
+                        onclick="closeProject(4)"
+                      >
+                        <i class="las la-times"></i>
+                      </button>
+                      <div class="project__details-categories">
+                        <ul>
+                          <li>
+                            <span class="project__details-category">
+                              Microservices
+                            </span>
+                          </li>
+                          <li>
+                            <span class="project__details-category">
+                              Web Development
+                            </span>
+                          </li>
+                          <li>
+                            <span class="project__details-category">
+                              BPMN
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <h2
+                        class="project__details-title heading-secondary u-margin-top-medium"
+                      >
+                        Workflow Service
+                      </h2>
+                      <p
+                        class="project__details-description u-margin-top-small"
+                      >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Nisl condimentum id venenatis a. Urna nunc
+                        id cursus metus aliquam.
+                      </p>
+                      <div class="u-clear-fix u-margin-top-large">
+                        <span class="project__details-site">
+                          <i class="las la-link"></i>
+                          <a href="#" class="project__details-site-link"
+                            >Visit Link</a
+                          >
+                        </span>
+                        <span class="project__details-status">
+                          <i class="las la-arrow-circle-up"></i>
+                          1 month ago
+                        </span>
+                        <button
+                          class="btn-shadow project__btn-preview"
+                          onclick="nextPage('project-main-4', 'project-page-1', 'project-page-2')"
+                        >
+                          Preview
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="project__page project__page--2"
+                    id="project-page-2"
+                  >
+                    <div class="u-margin-top-small">
+                      <button
+                        class="btn-scale project__btn-return"
+                        onclick="nextPage('project-main-4', 'project-page-2', 'project-page-1')"
+                      >
+                        <i class="las la-chevron-circle-left"></i>
+                      </button>
+                    </div>
+                    <div class="project__preview">
+                      <div class="project__preview-content">
+                        <div
+                          class="project__preview-card project__preview-card--square"
+                        >
+                          <img
+                            class="project__preview-img"
+                            loading="lazy"
+                            src="https://images.unsplash.com/photo-1621160471147-c5be030e199b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxMTEzMw&ixlib=rb-1.2.1&q=85&height=480"
+                            alt=""
+                          />
+                          <div class="project__preview-about">
+                            <h3>Square Picture</h3>
+                            <p>This is a very beautiful pictures</p>
+                          </div>
+                        </div>
+                        <div
+                          class="project__preview-card project__preview-card--wide"
+                        >
+                          <img
+                            class="project__preview-img"
+                            loading="lazy"
+                            src="https://images.unsplash.com/photo-1621160471147-c5be030e199b?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxMTEzMw&ixlib=rb-1.2.1&q=85&height=480"
+                            alt=""
+                          />
+                          <div class="project__preview-about">
+                            <h3>Wide Picture</h3>
+                            <p>This is a very beautiful pictures</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="project__preview-nav">
+                      <ul>
+                        <li>
+                          <span
+                            id="project-preview-1"
+                            class="project__preview-nav-button project__preview-nav-button-select"
+                            onclick="selectPreview('project-main-4', 1, -0.5)"
+                          ></span>
+                        </li>
+                        <li>
+                          <span
+                            id="project-preview-2"
+                            class="project__preview-nav-button"
+                            onclick="selectPreview('project-main-4', 2, +0.5)"
                           ></span>
                         </li>
                       </ul>
