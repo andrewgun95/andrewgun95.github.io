@@ -463,7 +463,7 @@ details[open] > summary .project__topic-button::after {
   .project__topic-title:hover .project__topic-title-text {
     background-position: -100% 0;
     color: #FFF; }
-  .project__topic-title-select-text {
+  .project__topic-title-input:checked + .project__topic-title-label > .project__topic-title-text {
     background-position: -100% 0;
     color: #FFF; }
   .project__topic-title-hint {

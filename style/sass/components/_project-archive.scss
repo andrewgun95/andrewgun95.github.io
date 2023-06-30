@@ -184,7 +184,7 @@
         color: $color-secondary;
     }
 
-    &-select-text {
+    &-input:checked + &-label > &-text {
         background-position: -100% 0;
         color: $color-secondary;
     }
