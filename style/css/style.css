@@ -101,7 +101,8 @@ body {
   font-size: 1.6rem;
   text-transform: uppercase;
   border-radius: 2.5rem;
-  transition: all .2s; }
+  transition: all .2s;
+  cursor: pointer; }
 
 .btn-shadow:hover {
   transform: translateY(-0.3rem);
@@ -115,7 +116,8 @@ body {
   display: inline-block;
   position: relative;
   font-size: 4rem;
-  transition: all .2s; }
+  transition: all .2s;
+  cursor: pointer; }
 
 .btn-scale:hover {
   transform: scale(1.2); }
@@ -459,10 +461,8 @@ details[open] > summary .project__topic-button::after {
     background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, black 50%);
     background-size: 200%;
     background-position: 0 0;
-    transition: all .5s; }
-  .project__topic-title:hover .project__topic-title-text {
-    background-position: -100% 0;
-    color: #FFF; }
+    cursor: pointer;
+    transition: all .2s; }
   .project__topic-title-input:checked + .project__topic-title-label > .project__topic-title-text {
     background-position: -100% 0;
     color: #FFF; }
