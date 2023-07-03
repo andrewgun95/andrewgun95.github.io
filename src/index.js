@@ -1,9 +1,26 @@
+/* VARIABLES */
+
+const skillBar = {
+  size: 160,
+  barColor: "#B9B6B3",
+  scaleLength: 0,
+  lineWidth: 15,
+  trackColor: "transparent",
+  lineCap: "circle",
+  animate: 5000,
+};
+
 /* NAVIGATION */
 
 function selectNavigation(number) {
   document.querySelectorAll('[id^="navigation"]').forEach((element) => {
     if (element.id.includes(number)) {
       element.classList.toggle("navigation__select");
+
+      /* SKILLS BAR */
+      if (element.href != null && element.href.includes("section-services")) {
+        $(".skill__chart").easyPieChart(skillBar);
+      }
     }
   });
 }

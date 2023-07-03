@@ -42,8 +42,9 @@
 
         padding: 5rem;
 
-        background-color: $color-secondary;
-        box-shadow: 0 .75rem 3rem rgba($color-primary, 0.1);
+        background-color: $light-grey-color;
+
+        box-shadow: 0 0 3px 1px rgba($color-primary, .2), 2px 2px 3px rgba($color-primary, .3), inset 2px 2px 2px $color-secondary;
 
         &-categories {
 

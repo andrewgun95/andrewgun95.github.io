@@ -48,6 +48,10 @@
         }
 
         &--3 {
+            @include btn-hide("Services");
+        }
+
+        &--4 {
             @include btn-hide("End");
         }
     }

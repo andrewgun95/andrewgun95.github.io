@@ -6,7 +6,7 @@
         left: 0;
 
         &-exit {
-            transition: all .5s ease 1s;
+            transition: all .5s ease .5s;
 
             transform: translateX(-100%);
 

@@ -1,0 +1,76 @@
+.skill {
+    
+    &__set {
+        width: 75.75%;
+        text-align: center;
+    }
+
+    &__box {
+        display: inline-block;
+
+        width: 20rem;
+        height: 24rem;
+
+        padding: 2rem;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        position: relative;
+
+        transition: all .2s;
+
+        &:hover {
+            transform: translateY(-1.5rem);
+        }
+    }
+
+    &__box canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        color: $color-primary;
+    }
+
+    &__title {
+        margin-top: 1.5rem;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    &__chart {
+        position: relative;
+        width: 100%;
+        height: 16rem;
+        // Text vertically & horizontally center
+        text-align: center;
+        line-height: 6.5;
+        
+        &::after {
+            content: "";
+
+            display: inline-block;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+
+            border-radius: 50%;
+        }
+    }
+
+    &__value {
+        font-size: 2.5rem;
+        color: $color-primary;
+        font-weight: 300;
+    }
+
+}

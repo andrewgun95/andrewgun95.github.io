@@ -1,0 +1,47 @@
+.core-values {
+
+    &__card {
+        display: inline-block;
+        width: 24rem;
+
+        padding: 2rem;
+
+        &:not(&:last-child) {
+            margin-right: 2rem;
+        }
+
+        background-color: $light-grey-color;
+        box-shadow: 0 0 3px 1px rgba($color-primary, .2), 2px 2px 3px rgba($color-primary, .3), inset 2px 2px 2px $color-secondary;
+
+        transition: all .2s;
+
+        &:hover {
+            transform: translateY(-1.5rem);
+            box-shadow: 0 0 6px 2px rgba($color-primary, .2), 4px 4px 6px rgba($color-primary, .3), inset 2px 2px 2px $color-secondary;
+        }
+
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__icon {
+        font-size: 8rem;
+    }
+
+    &__title {
+        margin-top: 1rem;
+        font-size: $regular-text-size;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    &__description {
+        margin-top: 2.5rem;
+        font-size: $regular-text-size;
+        height: 12rem;
+        overflow: hidden;
+    }
+
+}
