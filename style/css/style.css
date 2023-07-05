@@ -691,10 +691,19 @@ details[open] > summary .project__topic-button::after {
   font-weight: 300; }
 
 .core-values__description {
-  margin-top: 2.5rem;
+  margin-top: 5rem;
   font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 2;
   height: 12rem;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
+  .core-values__description > span {
+    padding: .5rem 1rem;
+    background-color: #000;
+    color: #FFF;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
 
 .skill__set {
   width: 75.75%;
