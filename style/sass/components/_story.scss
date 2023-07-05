@@ -40,6 +40,8 @@
         font-size: 2rem;
 
         overflow: hidden;
+
+        list-style: inside;
     }
 
     &__text:not(&__select-text) {

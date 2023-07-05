@@ -263,7 +263,8 @@ body {
     top: 0;
     left: 0;
     font-size: 2rem;
-    overflow: hidden; }
+    overflow: hidden;
+    list-style: inside; }
   .story__text:not(.story__select-text) {
     opacity: 0; }
   .story__job-skill-list::after {
@@ -619,7 +620,7 @@ details[open] > summary .project__topic-button::after {
         .project__preview-card:hover::after {
           opacity: 1; }
     .project__preview-img {
-      object-fit: cover;
+      object-fit: contain;
       width: 100%;
       height: 100%; }
     .project__preview-about {
@@ -629,10 +630,16 @@ details[open] > summary .project__topic-button::after {
       color: #FFF; }
       .project__preview-about h3 {
         font-size: 2rem;
-        font-weight: lighter; }
+        font-weight: lighter;
+        background-color: #000;
+        color: #FFF;
+        padding: .5rem; }
       .project__preview-about p {
         font-size: 1.6rem;
-        font-weight: 300; }
+        font-weight: 300;
+        background-color: #000;
+        color: #FFF;
+        padding: .5rem; }
   .project__preview-nav ul {
     width: 3.5rem;
     margin: 0 auto;
