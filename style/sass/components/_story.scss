@@ -30,6 +30,10 @@
         position: relative;
         width: 80rem;
         height: 30rem;
+
+        @include screen(tablet_landscape) {
+            height: 25rem;
+        }
     }
 
     &__text {
@@ -49,6 +53,11 @@
     }
 
     &__job-skill {
+
+        @include screen(tablet_landscape) {
+            width: 80rem;
+        }
+
         &-list {
             @include clearfix;
         }

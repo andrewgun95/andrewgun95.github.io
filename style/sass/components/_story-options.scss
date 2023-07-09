@@ -33,6 +33,10 @@
         margin-left: 5rem;
         position: relative;
 
+        @include screen(tablet_landscape) {
+            display: none;
+        }
+
         &__button {
             display: block;
             width: 1.5rem;

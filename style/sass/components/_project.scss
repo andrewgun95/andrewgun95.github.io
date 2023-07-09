@@ -34,6 +34,14 @@
     &__container {
         width: 60rem;
         height: 50rem;
+
+        @include screen(tablet_landscape) {
+            margin-left: 50%;
+        }
+
+        @include screen(phone) {
+            margin-left: 25%;
+        }
     }
 
     /* DETAILS */

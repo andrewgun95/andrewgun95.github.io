@@ -1,0 +1,24 @@
+.story-navigation {
+    display: none;
+
+    margin-bottom: 1rem;
+
+    @include screen(tablet_landscape) {
+        display: block;
+    }
+
+    &__icon {
+        font-size: 4rem
+    }
+
+    @include clearfix;
+
+    &--left {
+        float: left;
+    }
+
+    &--right {
+        float: right;
+    }
+
+}

@@ -1,3 +1,14 @@
+/*
+
+Media Queries
+
+0     - 600px   - Phone
+600px - 900px   - Tablet Portrait
+900px - 1200px  - Tablet Landscape
+[1200 - 1800px] - our normal style (default) - Desktop
+> 1800x         - Big desktop
+
+*/
 /* CSS RESET */
 *,
 *::after,
@@ -8,6 +19,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 40.625%; } }
 
 body {
   box-sizing: border-box;
@@ -34,6 +54,9 @@ button {
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   -webkit-appearance: none; }
+
+.container {
+  overflow-x: hidden; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -149,6 +172,9 @@ body {
   .story-option-group {
     margin-left: 5rem;
     position: relative; }
+    @media (max-width: 75em) {
+      .story-option-group {
+        display: none; } }
     .story-option-group__button {
       display: block;
       width: 1.5rem;
@@ -237,6 +263,23 @@ body {
   100% {
     transform: translateY(56rem); } }
 
+.story-navigation {
+  display: none;
+  margin-bottom: 1rem; }
+  @media (max-width: 75em) {
+    .story-navigation {
+      display: block; } }
+  .story-navigation__icon {
+    font-size: 4rem; }
+  .story-navigation::after {
+    content: "";
+    clear: both;
+    display: table; }
+  .story-navigation--left {
+    float: left; }
+  .story-navigation--right {
+    float: right; }
+
 .story {
   position: absolute;
   top: 0;
@@ -258,6 +301,9 @@ body {
     position: relative;
     width: 80rem;
     height: 30rem; }
+    @media (max-width: 75em) {
+      .story__content {
+        height: 25rem; } }
   .story__text {
     position: absolute;
     top: 0;
@@ -267,6 +313,9 @@ body {
     list-style: inside; }
   .story__text:not(.story__select-text) {
     opacity: 0; }
+  @media (max-width: 75em) {
+    .story__job-skill {
+      width: 80rem; } }
   .story__job-skill-list::after {
     content: "";
     clear: both;
@@ -523,6 +572,12 @@ details[open] > summary .project__topic-button::after {
   .project__container {
     width: 60rem;
     height: 50rem; }
+    @media (max-width: 75em) {
+      .project__container {
+        margin-left: 50%; } }
+    @media (max-width: 37.5em) {
+      .project__container {
+        margin-left: 25%; } }
   .project__details {
     padding: 5rem;
     background-color: #F3F3F2;
@@ -665,6 +720,15 @@ details[open] > summary .project__topic-button::after {
     .project__preview-nav-button-select {
       background-color: #000; }
 
+@media (max-width: 75em) {
+  .core-values {
+    text-align: center; } }
+
+@media (max-width: 56.25em) {
+  .core-values {
+    width: 52rem;
+    margin: 0 auto; } }
+
 .core-values__card {
   display: inline-block;
   width: 24rem;
@@ -674,6 +738,14 @@ details[open] > summary .project__topic-button::after {
   transition: all .2s; }
   .core-values__card:not(.core-values__card:last-child) {
     margin-right: 2rem; }
+    @media (max-width: 56.25em) {
+      .core-values__card:not(.core-values__card:last-child) {
+        margin-right: 0; } }
+  @media (max-width: 56.25em) {
+    .core-values__card {
+      margin-top: 2rem; }
+      .core-values__card:nth-child(odd) {
+        margin-right: 2rem !important; } }
   .core-values__card:hover {
     transform: translateY(-1.5rem);
     box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2), 4px 4px 6px rgba(0, 0, 0, 0.3), inset 2px 2px 2px #FFF; }
@@ -708,6 +780,9 @@ details[open] > summary .project__topic-button::after {
 .skill__set {
   width: 75.75%;
   text-align: center; }
+  @media (max-width: 75em) {
+    .skill__set {
+      width: 100%; } }
 
 .skill__box {
   display: inline-block;
@@ -716,8 +791,28 @@ details[open] > summary .project__topic-button::after {
   padding: 2rem;
   position: relative;
   transition: all .2s; }
+  @media (max-width: 75em) {
+    .skill__box {
+      width: 22rem; } }
+  @media (max-width: 56.25em) {
+    .skill__box {
+      width: 24rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (max-width: 37.5em) {
+    .skill__box {
+      width: 28rem; } }
   .skill__box:not(:last-child) {
     margin-right: 1.5rem; }
+    @media (max-width: 56.25em) {
+      .skill__box:not(:last-child) {
+        margin-top: 0;
+        margin-bottom: 5rem;
+        margin-right: auto; } }
+    @media (max-width: 37.5em) {
+      .skill__box:not(:last-child) {
+        margin-bottom: 10rem; } }
   .skill__box:hover {
     transform: translateY(-1.5rem); }
 
@@ -735,6 +830,15 @@ details[open] > summary .project__topic-button::after {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 300; }
+  @media (max-width: 75em) {
+    .skill__title {
+      margin-top: 2rem; } }
+  @media (max-width: 56.25em) {
+    .skill__title {
+      margin-top: 4.5rem; } }
+  @media (max-width: 37.5em) {
+    .skill__title {
+      margin-top: 10rem; } }
 
 .skill__chart {
   position: relative;
@@ -742,6 +846,15 @@ details[open] > summary .project__topic-button::after {
   height: 16rem;
   text-align: center;
   line-height: 6.5; }
+  @media (max-width: 75em) {
+    .skill__chart {
+      line-height: 7; } }
+  @media (max-width: 56.25em) {
+    .skill__chart {
+      line-height: 8; } }
+  @media (max-width: 37.5em) {
+    .skill__chart {
+      line-height: 10; } }
   .skill__chart::after {
     content: "";
     display: inline-block;
@@ -770,6 +883,13 @@ details[open] > summary .project__topic-button::after {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+      @media (max-width: 75em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 0; } }
+    @media (max-width: 75em) {
+      .row [class^="col-"] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -888,6 +1008,9 @@ details[open] > summary .project__topic-button::after {
         transform: scale(1.25); }
   .header__job {
     margin: 25rem 0; }
+    @media (max-width: 75em) {
+      .header__job {
+        margin: 15rem 0; } }
     .header__job-title {
       position: relative; }
       .header__job-title--parent {
@@ -953,6 +1076,9 @@ details[open] > summary .project__topic-button::after {
       text-align: justify;
       padding: 0 10%;
       animation: fadeInKeyframes 1s ease-in 0.75s; }
+      @media (max-width: 75em) {
+        .header__job-description {
+          margin-top: 6rem; } }
 
 @keyframes fadeInKeyframes {
   0% {

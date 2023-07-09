@@ -11,6 +11,19 @@
 
 html {
     font-size: 62.5%; // 10 px ~ 1 rem
+
+    
+    @include screen(tablet_landscape) {
+        font-size: 56.25%; // 9 px
+    }
+
+    @include screen(tablet_portrait) {
+        font-size: 50%; // 8 px
+    }
+
+    @include screen(phone) {
+        font-size: 40.625%; // 6 px
+    }
 }
 
 body {
@@ -49,4 +62,6 @@ button {
     -webkit-appearance: none;
 }
 
-.container {}
+.container {
+    overflow-x: hidden;
+}

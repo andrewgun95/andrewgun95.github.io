@@ -54,6 +54,56 @@ function selectStyleById(targetElement, targetSelector, selectId, selectStyle) {
   });
 }
 
+/* STORY NAVIGATION (Small Screen) */
+
+const listStory = [ 
+  {
+    number : '1',
+    textNumber : 'text-1'
+  },
+  {
+    number : '2',
+    textNumber : 'text-1'
+  },
+  {
+    number : '3',
+    textNumber : 'text-3'
+  },
+  {
+    number : '3',
+    textNumber : 'text-2'
+  },
+  {
+    number : '3',
+    textNumber : 'text-1'
+  },
+  {
+    number : '4',
+    textNumber : 'text-1'
+  },
+];
+
+var currentStory = 0;
+
+function nextStory(event) {
+  if (currentStory + 1 < listStory.length) {
+    currentStory++;
+
+    let selectStory = listStory[currentStory];
+    this.selectStory(selectStory.number, selectStory.textNumber);
+  }
+}
+
+function prevStory(event) {
+  if (currentStory - 1 > -1) {
+    currentStory--;
+
+    let selectStory = listStory[currentStory];
+    this.selectStory(selectStory.number, selectStory.textNumber);
+  }
+}
+
+
 /* PROJECT MAIN */
 
 function openProject(number) {

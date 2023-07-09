@@ -9,7 +9,10 @@
 @import "./base/animation";
 
 @import "./components/buttons";
+// Wide Screen
 @import "./components/story-options";
+// Small Screen
+@import "./components/story-navigation";
 @import "./components/story";
 @import "./components/project-page";
 @import "./components/project-archive";

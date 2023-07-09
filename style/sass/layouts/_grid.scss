@@ -13,6 +13,16 @@
 
         &:not(:last-child) {
             margin-right: $grid-gutter-horizontal;
+
+            
+            @include screen(tablet_landscape) {
+                margin-right: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        @include screen(tablet_landscape) {
+            width: 100% !important;
         }
     }
 

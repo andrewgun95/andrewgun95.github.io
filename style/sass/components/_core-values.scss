@@ -1,5 +1,14 @@
 .core-values {
 
+    @include screen(tablet_landscape) {
+        text-align: center;
+    }
+
+    @include screen(tablet_portrait) {
+        width: 52rem;
+        margin: 0 auto;
+    }
+
     &__card {
         display: inline-block;
         width: 24rem;
@@ -8,6 +17,18 @@
 
         &:not(&:last-child) {
             margin-right: 2rem;
+            
+            @include screen(tablet_portrait) {
+                margin-right: 0;
+            }
+        }
+
+        @include screen(tablet_portrait) {
+            margin-top: 2rem;
+
+            &:nth-child(odd) {
+                margin-right: 2rem !important;
+            }
         }
 
         background-color: $light-grey-color;
